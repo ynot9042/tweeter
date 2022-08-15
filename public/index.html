@@ -23,17 +23,41 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-        <span class="logo">TWEETER</span>
+      <div class="logo"> 
+        <span>TWEETER</span>
+      </div>
+      <div class="write-a-new-tweet">
+        <div class="newtweet">
+          <p><span class="write">Write</span> a new tweet</p>
+        </div>
+        <div class="arrow">
+          <i class="fa-solid fa-angles-down"></i>
+        </div>
+      </div>
     </nav>
+
+    <header class="profile-page">
+      <div class="profile-picture">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div class="name">
+          <h2>Your Name</h2>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
 
-    <p>Hello</p>
+    <p></p>
   </body>
 </html>

@@ -4,10 +4,38 @@ nav {
     color:#FFFFFF;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 
 .logo {
   font-family: "Bungee", cursive;
   margin-left: 1.5em;
+  font-weight: 400;
+  font-size: xx-large;
 }
+
+.write-a-new-tweet {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newtweet {
+  display:flex;
+  margin-right: 1.5em;
+  margin-bottom: -15px;
+}
+
+.arrow {
+  margin-right:1.5em;
+}
+.write{
+  font-weight: 600;
+}
+
+
+
 
