@@ -1,0 +1,25 @@
+.humming {
+  margin-top: 50px;
+  font-weight:600;
+  font-size: x-large;
+}
+
+#tweet-text {
+  border:none;
+  border-bottom: 3px solid black;
+  width: 100%;
+  resize: none;
+  background-color: transparent;
+  height:35px
+}
+
+.button-counter {
+  display:flex;
+  justify-content: space-between ;
+}
+
+.submit {
+  background-color:#4056A1;
+  font-family: "Bungee", cursive;
+  color: aliceblue;
+}
