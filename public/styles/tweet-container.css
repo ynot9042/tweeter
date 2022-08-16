@@ -1,0 +1,75 @@
+article.tweet {
+  display:flex;
+  flex-direction: column;
+  border: 3px solid black;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+article.tweet:hover {
+  box-shadow: 10px 10px 10px rgb(90, 86, 86);
+}
+
+.name-avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweet header {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:20px
+}
+
+.handle {
+  font-weight: 600;
+  color:rgb(172, 184, 185) ;
+}
+
+.comment {
+  margin-left: 22px;
+  font-weight: 600;
+}
+
+article.tweet footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-color: transparent;
+  border-top: 3px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.time-ago {
+  font-size: medium;
+  margin-left: 15px;
+}
+
+.icons {
+  width: 70px;
+  margin-right: 20px;
+  display:flex;
+  justify-content: space-between;
+  font-size: medium;
+  color:darkcyan
+}
+
+.flag-icon:hover{
+  color:rgb(164, 130, 28)
+}
+
+.heart-icon:hover{
+  color:rgb(164, 130, 28)
+}
+
+.retweet-icon:hover{
+  color:rgb(164, 130, 28)
+}
+
+
+
