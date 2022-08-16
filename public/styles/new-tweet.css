@@ -23,3 +23,11 @@
   font-family: "Bungee", cursive;
   color: aliceblue;
 }
+
+.counter {
+  font-weight: 800;
+}
+
+.negative {
+  color:red
+}
