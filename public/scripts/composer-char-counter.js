@@ -1,6 +1,7 @@
 $(document).ready(function () {
   console.log("Document Ready");
 
+
   $("#tweet-text").on("input", function () {
     let tweetLength = Number(this.value.length);
     let charLeft = 140 - Number(tweetLength);

@@ -73,6 +73,7 @@ $(document).ready(function () {
       success: (result) => {
         $(".tweets-container").empty();
         $("#tweet-text").val("");
+        $(".counter").val(140);
         loadTweets();
       },
       error: (error) => {
