@@ -12,7 +12,7 @@ $(document).ready(function () {
       let result = "-" + overValue;
       let counter = $(this).siblings(".button-counter").children(".counter");
       counter.addClass("negative")
-      $(this).siblings(".button-counter").children(".counter").val(result);
+      counter.val(result);
       
     }
   });
