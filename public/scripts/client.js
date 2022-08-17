@@ -4,31 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
-
 $(document).ready(function () {
   const renderTweets = function (tweets) {
     for (const tweet of tweets) {
@@ -38,6 +13,7 @@ $(document).ready(function () {
   };
 
   const createTweetElement = function (tweetData) {
+    let timeAgo = timeago.format(tweetData.created_at);
     let tweetObj = `<article class="tweet">
     <header>
       <div class="name-avatar">
@@ -48,7 +24,7 @@ $(document).ready(function () {
     </header>
     <p class="comment">${tweetData.content.text}</p>
     <footer>
-      <p class="time-ago">${tweetData.created_at}</p>
+      <p class="time-ago">${timeAgo}</p>
       <div class="icons">
         <div class="flag-icon">
           <i class="fa-solid fa-flag"></i>
@@ -66,19 +42,41 @@ $(document).ready(function () {
     return tweetObj;
   };
 
-  renderTweets(data);
 
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
-    console.log($(this));
+
+    if ($("#tweet-text").val() === "") {
+      return alert("Please enter a tweet!");
+    } 
+
+    if($("#tweet-text").val().length > 140) {
+      return alert("Please shorten your tweet!")
+    }
+
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: $(this).serialize(),
+      success: (result) => {
+        $(".tweets-container").empty();
+        $("#tweet-text").val("")
+        loadTweets();
+      },
+      error: (error) => {
+        console.error(error);
+      },
     });
   });
 
-  const loadTweets = function() {
-
+  const loadTweets = function () {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      success: (result) => {
+        renderTweets(result);
+      },
+    });
   };
+  loadTweets();
 });
