@@ -13,7 +13,14 @@ $(document).ready(function () {
     }
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function (tweetData) {
+    
     let timeAgo = timeago.format(tweetData.created_at);
     let tweetObj = `<article class="tweet">
     <header>
@@ -23,7 +30,7 @@ $(document).ready(function () {
       </div>
       <p class="handle">${tweetData.user.handle}</p>
     </header>
-    <p class="comment">${tweetData.content.text}</p>
+    <p class="comment">${escape(tweetData.content.text)}</p>
     <footer>
       <p class="time-ago">${timeAgo}</p>
       <div class="icons">
