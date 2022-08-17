@@ -5,6 +5,9 @@
  */
 
 $(document).ready(function () {
+  $(".error-no-tweet").hide();
+  $(".error-long-tweet").hide();
+
   const renderTweets = function (tweets) {
     for (let i = tweets.length - 1; i >= 0; i--) {
       let tweet = tweets[i];
@@ -20,7 +23,6 @@ $(document).ready(function () {
   };
 
   const createTweetElement = function (tweetData) {
-    
     let timeAgo = timeago.format(tweetData.created_at);
     let tweetObj = `<article class="tweet">
     <header>
@@ -53,12 +55,15 @@ $(document).ready(function () {
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
 
+  $(".error-no-tweet").hide();
+  $(".error-long-tweet").hide();
+
     if ($("#tweet-text").val() === "") {
-      return alert("Please enter a tweet!");
+      return $(".error-no-tweet").show();
     }
 
     if ($("#tweet-text").val().length > 140) {
-      return alert("Please shorten your tweet!");
+      return $(".error-long-tweet").show();
     }
 
     $.ajax({

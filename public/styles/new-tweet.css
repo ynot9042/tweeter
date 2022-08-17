@@ -31,3 +31,39 @@
 .negative {
   color:red
 }
+
+.error-no-tweet {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid rgb(213, 67, 67);
+  border-radius: 6px;
+  background-color: rgb(229, 101, 101);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.error-logo {
+  margin-right: 50px;
+  margin-left: 60px;
+  
+}
+
+.error-message {
+  margin-right: 100px;
+  font-size: xxx-large;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+.error-long-tweet {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid rgb(213, 67, 67);
+  border-radius: 6px;
+  background-color: rgb(229, 101, 101);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+}
