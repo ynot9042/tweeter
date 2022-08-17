@@ -6,7 +6,8 @@
 
 $(document).ready(function () {
   const renderTweets = function (tweets) {
-    for (const tweet of tweets) {
+    for (let i = tweets.length - 1; i >= 0; i--) {
+      let tweet = tweets[i];
       const $tweet = $(createTweetElement(tweet));
       $(".tweets-container").append($tweet);
     }
@@ -42,16 +43,15 @@ $(document).ready(function () {
     return tweetObj;
   };
 
-
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
 
     if ($("#tweet-text").val() === "") {
       return alert("Please enter a tweet!");
-    } 
+    }
 
-    if($("#tweet-text").val().length > 140) {
-      return alert("Please shorten your tweet!")
+    if ($("#tweet-text").val().length > 140) {
+      return alert("Please shorten your tweet!");
     }
 
     $.ajax({
@@ -60,7 +60,7 @@ $(document).ready(function () {
       data: $(this).serialize(),
       success: (result) => {
         $(".tweets-container").empty();
-        $("#tweet-text").val("")
+        $("#tweet-text").val("");
         loadTweets();
       },
       error: (error) => {
