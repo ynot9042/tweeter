@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple single paged Twitter clone with an emphasis on asynchronous requests using AJAX and JQuery to produce dynamic real-time web applications.
+Tweeter is a simple single paged Twitter clone built with HTML, CSS, JS, Jquery and AJAX. This project had emphasis on asynchronous requests using AJAX and JQuery to produce dynamic real-time web applications.
 
 # Final Product
 <img width="1174" alt="Screen Shot 2022-08-18 at 3 16 31 PM" src="https://user-images.githubusercontent.com/55267263/185476381-6869920b-4364-41f3-ad66-34cfa142d208.png">
