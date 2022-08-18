@@ -19,7 +19,6 @@ nav {
   font-size: xx-large;
 }
 
-
 .write-a-new-tweet {
   display:flex;
   flex-direction: column;
@@ -31,7 +30,6 @@ nav {
   margin-right: 1.5em;
   margin-bottom: -15px;
 }
-
 
 #arrow-logo {
   margin-right: 20px;
@@ -46,16 +44,13 @@ nav {
   0% {
     transform: translateY(0%);
   }
-
   50% {
     transform: translateY(85%);
   }
-
   100% {
     transform: translateY(0%);
   }
 }
-
 
 .write{
   font-weight: 600;

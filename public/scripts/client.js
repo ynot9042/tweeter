@@ -8,7 +8,7 @@ $(document).ready(function () {
   $(".error-no-tweet").hide();
   $(".error-long-tweet").hide();
 
-
+  //Renders and appends newly formed tweet to the body
   const renderTweets = function (tweets) {
     for (let i = tweets.length - 1; i >= 0; i--) {
       let tweet = tweets[i];
@@ -17,12 +17,14 @@ $(document).ready(function () {
     }
   };
 
+  // Escape function for XSS
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // Function for template literal of tweet structure
   const createTweetElement = function (tweetData) {
     let timeAgo = timeago.format(tweetData.created_at);
     let tweetObj = `<article class="tweet">
@@ -53,6 +55,7 @@ $(document).ready(function () {
     return tweetObj;
   };
 
+  // Jquery/AJAX sumit post request with error code functionality.
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
 
@@ -82,6 +85,7 @@ $(document).ready(function () {
     });
   });
 
+  // AJAX get request of newly formed tweets list
   const loadTweets = function () {
     $.ajax({
       type: "GET",
@@ -94,6 +98,7 @@ $(document).ready(function () {
   };
   loadTweets();
 
+  //Event listener and handler for NAV bar compose tweet button(Stretch)
   $(".write-a-new-tweet").click(function (event) {
     $("#tweet-text").focus();
   });
