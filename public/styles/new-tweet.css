@@ -1,16 +1,15 @@
-.humming {
-  margin-top: 50px;
-  font-weight:600;
-  font-size: x-large;
-}
-
 #tweet-text {
   border:none;
   border-bottom: 3px solid black;
   width: 100%;
   resize: none;
   background-color: transparent;
-  height:55px
+  height:55px;
+  margin-top: 55px;
+}
+
+textarea::placeholder {
+  font-weight: bold;
 }
 
 .button-counter {
@@ -22,6 +21,11 @@
   background-color:#4056A1;
   font-family: "Bungee", cursive;
   color: aliceblue;
+  border-radius: 10px;
+}
+
+.submit:hover {
+  background-color: rgb(135, 135, 216);
 }
 
 .counter {

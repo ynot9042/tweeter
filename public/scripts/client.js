@@ -8,6 +8,7 @@ $(document).ready(function () {
   $(".error-no-tweet").hide();
   $(".error-long-tweet").hide();
 
+
   const renderTweets = function (tweets) {
     for (let i = tweets.length - 1; i >= 0; i--) {
       let tweet = tweets[i];
