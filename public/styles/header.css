@@ -6,10 +6,17 @@
   flex-direction: column;
   background-color: #b5a14f;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  
 }
+
+.profile-picture {
+  margin-top: 20px;
+}
+
 
 .name {
   margin-top: -50px;
+  font-size: 1em;
 }
 
 .first-name {
@@ -19,3 +26,34 @@
 .last-name {
   font-weight: 100; 
 }
+
+
+@media all and (min-width:1024px) {
+  .middle-page{
+    display:flex;
+    flex-direction:row;
+    margin-top: 200px;
+  }
+  .profile-page {
+    float:left;
+    width: 30%;
+    height: 10%;
+    margin-left: 40px;
+    margin-top: 53px;
+
+  }
+  .container {
+    width: 50%;
+    height: 100%
+  }
+}
+
+@media all and (max-width:1023px) {
+  .profile-page {
+    margin-top: 0px;
+  }
+}
+
+
+
+

@@ -1,6 +1,5 @@
 nav {
     height:120px;   
-    background-color: #4056A1;
     color:#FFFFFF;
     display: flex;
     align-items: center;
@@ -8,7 +7,6 @@ nav {
     position: fixed;
     top: 0px;
     width: 100%;
-    background: rgb(0,23,36);
     background: linear-gradient(90deg, rgba(0,23,36,1) 0%, rgba(7,21,84,0.6531206232492996) 71%, rgba(0,138,255,1) 100%);
 }
 
@@ -36,9 +34,9 @@ nav {
   margin-right: 20px;
 }
 
-.write-a-new-tweet:hover  #arrow-logo{
+#arrow-logo{
   animation: updown 1s linear 0s infinite normal;
-  color: rgb(209, 132, 132);
+  color: rgb(147, 57, 57);
 }
 
 @keyframes updown {
@@ -47,7 +45,7 @@ nav {
   }
 
   50% {
-    transform: translateY(90%);
+    transform: translateY(85%);
   }
 
   100% {
@@ -58,6 +56,12 @@ nav {
 
 .write{
   font-weight: 600;
+}
+
+@media all and (max-width:1023px) {
+  nav {
+    background:none;
+  }
 }
 
 

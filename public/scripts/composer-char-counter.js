@@ -5,8 +5,10 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() > 400) {
       $("#up-arrow").fadeIn();
+      $(".write-a-new-tweet").fadeOut();
     } else {
       $("#up-arrow").fadeOut();
+      $(".write-a-new-tweet").fadeIn();
     }
   });
 

@@ -71,7 +71,6 @@ $(document).ready(function () {
       url: "/tweets",
       data: $(this).serialize(),
       success: (result) => {
-        $(".tweets-container").empty();
         $("#tweet-text").val("");
         $(".counter").val(140);
         loadTweets();
@@ -87,6 +86,7 @@ $(document).ready(function () {
       type: "GET",
       url: "/tweets",
       success: (result) => {
+        $(".tweets-container").empty();
         renderTweets(result);
       },
     });
