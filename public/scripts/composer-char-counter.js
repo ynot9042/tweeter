@@ -1,6 +1,19 @@
 $(document).ready(function () {
   console.log("Document Ready");
+  $("#up-arrow").hide();
 
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 400) {
+      $("#up-arrow").fadeIn();
+    } else {
+      $("#up-arrow").fadeOut();
+    }
+  });
+
+  $("#up-arrow").click("click", function (event) {
+    $("#up-arrow").hide();
+    $("#tweet-text").focus();
+  });
 
   $("#tweet-text").on("input", function () {
     let tweetLength = Number(this.value.length);

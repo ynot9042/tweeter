@@ -55,8 +55,8 @@ $(document).ready(function () {
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
 
-  $(".error-no-tweet").hide();
-  $(".error-long-tweet").hide();
+    $(".error-no-tweet").hide();
+    $(".error-long-tweet").hide();
 
     if ($("#tweet-text").val() === "") {
       return $(".error-no-tweet").show();
@@ -92,4 +92,8 @@ $(document).ready(function () {
     });
   };
   loadTweets();
+
+  $(".write-a-new-tweet").click(function (event) {
+    $("#tweet-text").focus();
+  });
 });

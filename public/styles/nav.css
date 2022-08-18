@@ -8,6 +8,8 @@ nav {
     position: fixed;
     top: 0px;
     width: 100%;
+    background: rgb(0,23,36);
+    background: linear-gradient(90deg, rgba(0,23,36,1) 0%, rgba(7,21,84,0.6531206232492996) 71%, rgba(0,138,255,1) 100%);
 }
 
 .logo {
@@ -29,9 +31,31 @@ nav {
   margin-bottom: -15px;
 }
 
-.arrow {
-  margin-right:1.5em;
+
+#arrow-logo {
+  margin-right: 20px;
 }
+
+.write-a-new-tweet:hover  #arrow-logo{
+  animation: updown 1s linear 0s infinite normal;
+  color: rgb(209, 132, 132);
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(90%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
 .write{
   font-weight: 600;
 }
