@@ -1,18 +1,36 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple single paged Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+# Final Product
+<img width="1191" alt="Screen Shot 2022-08-18 at 3 02 21 PM" src="https://user-images.githubusercontent.com/55267263/185474615-73158144-f447-4d08-bb8b-26901ef709a5.png">
 
-## Getting Started
+<img width="714" alt="Screen Shot 2022-08-18 at 3 02 45 PM" src="https://user-images.githubusercontent.com/55267263/185474625-432bcb6d-5847-4549-b7dc-a9f3290f33cf.png">
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+<img width="714" alt="Screen Shot 2022-08-18 at 3 02 56 PM" src="https://user-images.githubusercontent.com/55267263/185474638-40804437-1605-4e28-b0e6-2a125f8f2718.png">
 
-## Dependencies
-
+# Dependencies
 - Express
-- Node 5.10.x or above
+- node.js
+- body-parser
+- chance
+- md5
+- timeago.js
+
+# Getting Started
+
+- Fork the repository and git clone it onto your local device
+
+- Install all required dependencies by using the following command in the terminal:
+
+```
+npm install
+```
+
+- Run the web application by using the following command in the terminal:
+
+```
+npm run local
+```
+
+
